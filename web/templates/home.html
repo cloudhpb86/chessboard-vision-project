@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际象棋识别</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="/static/images/favicon.ico" rel="shortcut icon">
+    <script src="../static/js/home.js" defer></script>
+</head>
+<body>
+        <aside class="sidebar">
+            <h2>关于项目：</h2>
+            <ul>
+                <li><a href="/" class="nav-link" data-target="intro">项目介绍</a></li>
+                <li><a href="/" class="nav-link" data-target="detection">在线检测</a></li>
+                <li><a href="/" class="nav-link" data-target="result">结果展示</a></li>
+                <li><a href="/" class="nav-link" data-target="contact">联系我</a></li>
+            </ul>
+
+            <div class="personal-info-box">
+                <div class="personal-info">
+                </div>
+            </div>
+        </aside>
+
+    <main>
+    <header>
+        <h1>计算机视觉课程设计</h1>
+        <h2>有请下一组--国际象棋识别</h2>
+    </header>
+    <section id="intro" class="project-intro">
+      <h2>项目介绍</h2>
+      <p align="center">
+   中国海洋大学计算机视觉课程设计项目，旨在从单张图像识别国际象棋的棋盘布局。 项目采用混合策略，巧妙地结合了经典的计算机视觉技术（用于棋盘检测与校正）和现代深度学习技术（用于棋子分类），最终能够将识别结果输出为标准的霍桑-爱德华兹表示法 (FEN) 字符串。 ✨ 项目特色 混合视觉技术: 综合利用OpenCV进行棋盘的透视变换、边缘检测和网格线定位，然后使用深度学习模型进行高精度的棋子分类。 高精度模型: 基于在ImageNet上预训练的VGG16模型进行迁移学习，对13种类别（黑白双方各6种棋子 + 空格）进行分类，在测试集上取得了优异的性能。 鲁棒的棋盘检测: 采用了投影分割法来抵抗棋子轮廓对网格线检测的干扰，能够处理有一定角度的棋盘图像。 标准化输出: 识别结果被准确地转换为FEN字符串，可以直接用于各种象棋软件或与象棋引擎（如Stockfish）进行交互。 🛠️ 技术栈 编程语言: Python 深度学习: Keras, TensorFlow 计算机视觉: OpenCV, Pillow (PIL) 科学计算与数据处理: NumPy, Pandas, Scikit-learn, SciPy 可视化: Matplotlib, Seaborn 象棋逻辑与渲染: python-chess, svglib, reportlab
+      </p>
+      <div style="width: 100%; text-align: center;">
+        <img src="../static/images/chessDisplay.png" alt="效果展示图" class="centered-image">
+      </div>
+    </section>
+
+    <section id="detection" class="upload-section">
+        <h2>在线检测</h2>
+            <div class="upload-rescrict">
+                <div class="upload-container">
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" id="imageUpload" name="imageUpload" accept="image/*" multiple onchange="handleFileSelect(event)" style="width: 2000px;height:500px"/>
+                        <div class="upload-instruction" id="uploadInstruction">拖拽、点击或粘贴上传图片</div>
+                        <div class="image-preview" id="imagePreview1"></div>
+                    </form>
+                </div>
+            </div>
+        <button class="detect-button" onclick="startDetection(event) ">点击进行检测</button>
+    </section>
+
+<section id="result" class="result-container hidden">
+  <div id="loading" class="loading hidden">
+    <i class="fas fa-spinner fa-spin"></i>
+    <p>正在处理中，请稍候...</p>
+  </div>
+
+  <div class="pics6">
+      <h2>结果展示</h2>
+    <div id="status3_pics">
+      <ul class="pics6_status3">
+        <li>
+          <img class="status3-pic" id="originalImage" src="{{ im1_path }}">
+          <div>上传的图片</div>
+        </li>
+        <li>
+          <img class="status3-pic" id="resultImage" src="{{ out_path }}">
+          <div>识别后的图片</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <div class="contact-info" section id="contact">
+        <p>国际象棋识别 </p>
+        <a href = "https://github.com/cloudhpb86/chessboard-vision-project">
+        <p>&copy;有请下一组</p>
+        </a>
+    </div>
+
+</main>
+
+</body>
+</html>
