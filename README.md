@@ -52,9 +52,13 @@
 
 在您的Google Drive中创建一个主文件夹 (例如 Chess_Project) 并将所有项目文件放入其中。
 
+创建Data文件夹放置数据集。
+
+将下载好的原始数据集解压到Data/Chess-Dataset文件夹中。
+
 创建一个新的Colab Notebook，挂载您的Google Drive。
 
-运行我们在对话中完善的数据划分脚本。该脚本会自动解压数据集，并按照80/20的比例创建符合Keras ImageDataGenerator 要求的 train 和 test 目录结构。
+运行我们在对话中完善的数据划分脚本。并按照80/20的比例创建符合Keras ImageDataGenerator 要求的 train 和 test 目录结构。
 
 ### 第二步：训练模型
 
@@ -89,7 +93,7 @@
 
 将项目文件（包括model_VGG16.h5）放在同一个目录下。
 
-运行主程序（同Colab平台）
+运行主程序（同Colab平台方案）
 
 
 🤝 致谢
