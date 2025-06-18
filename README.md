@@ -32,6 +32,7 @@
 📂 项目结构
 .
 ├── Data/                       # 存放数据集
+|  ├────Dataset
 ├── cv_chess_functions.py       # 核心函数库，封装了所有CV和图像处理功能
 ├── cv_chess_model_and_eval.ipynb # Jupyter Notebook，用于模型的训练、评估和分析
 ├── cv_chess_implement.ipynb    # Jupyter Notebook，主运行程序，用于读取、处理图片，生成结果图
@@ -83,9 +84,9 @@
 
 2. 要求您在代码中指定待识别图片的路径。
 
-3. 执行包含透视变换和投影分割法的完整识别流程。
+3. 执行包含透视变换和投影分割法的完整识别流程。（我们对测试图片test_image.jpeg已经做好了参数调试，您可以直接使用我们提供的测试图片得到结果"current_board.svg"）
 
-4. 输出最终的FEN字符串、ASCII棋盘和生成的PNG棋盘图像。
+4. 输出最终的FEN字符串、ASCII棋盘和生成的current_board.svg图像。
 
 - 在本地运行 (实时识别)
 
@@ -97,6 +98,6 @@
 
 
 🤝 致谢
-本项目最初由 Andrew Underwood 创建和分享。本仓库在原项目的基础上进行了大量的调试、优化和功能完善，特别是针对在Google Colab等云端环境中运行的适配和问题解决。
+本项目Andrew Underwood的基础上进行了大量的调试、优化和功能完善，特别是针对在Google Colab等云端环境中运行的适配和问题解决。
 
 原始项目文章: Board Game Image Recognition using Neural Networks on Towards Data Science
