@@ -101,3 +101,9 @@
 本项目Andrew Underwood的基础上进行了大量的调试、优化和功能完善，特别是针对在Google Colab等云端环境中运行的适配和问题解决。
 
 原始项目文章: Board Game Image Recognition using Neural Networks on Towards Data Science
+
+
+---
+
+☝️ 项目更新 2025/6/19
+新增了网页功能，在web端集成 读取图片 ——> 输出转化结果 功能模块。
