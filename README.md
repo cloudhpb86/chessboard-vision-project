@@ -30,6 +30,7 @@
 象棋逻辑与渲染: python-chess, svglib, reportlab
 
 📂 项目结构
+```
 .
 ├── Data/                       # 存放数据集
 |  ├────Dataset
@@ -38,6 +39,7 @@
 ├── cv_chess_implement.ipynb    # Jupyter Notebook，主运行程序，用于读取、处理图片，生成结果图
 ├── model_VGG16.h5              # 训练好的模型权重文件
 └── README.md                   # 本说明文件
+```
 
 🚀 运行指南
 本项目推荐在Google Colab环境中运行，因为它提供了免费的GPU资源，可以大大加速模型的训练和推理。
